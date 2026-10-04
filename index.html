@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A system prompt is rent paid on every call</title>
+<style>
+body{font-family:Georgia,serif;max-width:680px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#1a1a1a;background:#faf9f6}
+h1{font-size:1.6rem;line-height:1.3}
+p{margin:0 0 1.1em}
+a{color:#0a58ca}
+footer{margin-top:2rem;font-size:.85rem;color:#666}
+</style>
+</head>
+<body>
+<article>
+<h1>A system prompt is rent paid on every call</h1>
+<p>A support bot answers two thousand tickets a day. Its system prompt, the standing instructions that make it sound like the company, runs twenty-five hundred tokens. Invoices arrive per token, and the instructions ride along with every single call. Nobody reads that line of the bill on its own.</p>
+<p>The re-reading alone is five million tokens a day. At a shelf rate of $3 per million input tokens, that is $15 a day, $5,475 a year, spent on the model re-reading the same document. The ticket bodies themselves, a hundred and fifty tokens each, come to $328.50 a year. The rent runs about sixteen times the actual work.</p>
+<p>The first lever is caching. A cached prefix bills at roughly a tenth of the shelf rate, $0.30 per million. The same five million tokens now cost $1.50 a day, $547.50 a year. One config change and $4,900 a year stops leaking.</p>
+<p>The second lever is a trim. Cutting the prompt from twenty-five hundred tokens to a thousand, boilerplate out, guardrails kept, drops the re-read to two million tokens a day and $2,190 a year. Both levers together: $219 a year, down from $5,475.</p>
+<p>Rank prompts the way facilities ranks leases: re-read tokens per ticket, not how the instructions read in a doc. A prompt that costs $7.50 of rent per thousand tickets against 45 cents of ticket is a lease renegotiation waiting to happen.</p>
+<p><a href="https://pastagi.com/">PastAGI</a> audits this kind of bill line by line, serving costs included. The serving-math reviews price out what a model actually costs per hour of work, and the guides cover where caching fits before anyone touches the prompt itself.</p>
+</article>
+<footer>prompt-rent-math</footer>
+</body>
+</html>
